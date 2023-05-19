@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    background: black;
+    /*overflow: hidden; Puedes habilitarlo, pero perderás el scroll al minimizar pantalla*/
+}
+
+#wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#game{
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 100px;
+    height: 140px;
+    margin: 1rem;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover{
+    transform: scale(1.25);
+}
+.card.active {
+    transform: rotateY(180deg);
+}
+
+.card div{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.card .face {
+    background: rgb(0, 102, 128);
+    transform: rotateY(180deg);
+    color: rgb(233, 227, 227);
+    border: 3px solid rgba(231, 235, 236, 0.5);
+    font-size: 6rem;
+}
+
+.card .back{
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+    border: 3px solid rgba(0, 102, 128, 0.5);
+}
+
+#input-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#card-input {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+#start-button {
+    padding: 0.5rem 1rem;
+}
