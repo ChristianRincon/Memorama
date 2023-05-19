@@ -71,11 +71,24 @@ body{
 }
 
 #card-input {
+    font-size: 1.1em;
     margin-right: 1rem;
-    padding: 0.5rem;
+    padding: 2rem;
     background-color: white;
 }
 
 #start-button {
-    padding: 0.5rem 1rem;
+    padding: 2rem;
+    box-shadow: 1px 1px 10px 6px  rgb(6, 136, 45);
+}
+
+/* Estilos para las flechas de incremento y decremento */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    padding: 1.5em;
+}
+
+input[type="number"]{
+    box-shadow: 1px 1px 10px 6px   rgb(6, 106, 136);
 }

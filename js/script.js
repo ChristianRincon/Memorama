@@ -1,10 +1,17 @@
-// Puedes cambiar el número de cartas a tu gusto en la variable 'totalCards'. Deben ser pares.
-const totalCards = 30;
+// Actualizaciones:
+// Cambiamos el total de cartas estáticos por dinámicos (de 4 a 30 cartas a elección del usuario)
+// Reinicio de juego al encontrar todos los pares.
 
+const input = document.getElementById('card-input');
+const btn = document.getElementById('start-button');
+
+
+btn.addEventListener ( 'click', () => {
+    const totalCards = input.value; // Valores dinámicos (4 a 30)
     let cards = [];
     let selectedCards = [];
-    let valuesUsed = [];
     let currentMove = 0;
+    let pairsFound = 0;
 
     let cardTemplate = '<div class="card"><div class="back"></div><div class="face"></div></div>';
 
@@ -20,15 +27,23 @@ const totalCards = 30;
                     const face2 = selectedCards[1].querySelector('.face').innerHTML;
 
                     if (face1 === face2) {
+                        pairsFound++;
                         selectedCards = [];
                         currentMove = 0;
-                    } else {
-                        setTimeout(() => {
-                            selectedCards[0].classList.remove('active');
-                            selectedCards[1].classList.remove('active');
-                            selectedCards = [];
-                            currentMove = 0;
-                        }, 800);
+
+                        if (pairsFound === totalCards / 2) { //Reinicio al encontrar todos los pares.
+                            setTimeout( () => {
+                                window.location.reload();
+                            }, 2000);                   
+                        }
+
+                    }else {
+                      setTimeout(() => {
+                          selectedCards[0].classList.remove('active');
+                          selectedCards[1].classList.remove('active');
+                          selectedCards = [];
+                          currentMove = 0;
+                      }, 800);
                     }
                 }
             }
@@ -48,8 +63,8 @@ const totalCards = 30;
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+            [array[i], array[j]] = [array[j], array[i]]; 
+        }      
     }
 
     let values = generateRandomValues();
@@ -63,6 +78,9 @@ const totalCards = 30;
         cards[i].querySelector('.card').addEventListener('click', activate);
     }
 
-   
+    btn.remove();
+    input.remove();
+});
+    
 
 
