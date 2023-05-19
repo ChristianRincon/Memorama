@@ -1,4 +1,4 @@
-// Evitamos que el usuario pueda ingresar manualmente valores en nuestro input y deba hacerlo por medio de los selectores de incremento y decremento.
+// Evitamos que el usuario pueda ingresar manualmente valores en nuestro input y lo forzamos a hacerlo por medio de los selectores de incremento y decremento.
 
 const input = document.getElementById('card-input');
 
