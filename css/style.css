@@ -70,12 +70,3 @@ body{
     align-items: center;
 }
 
-#card-input {
-    margin-right: 1rem;
-    padding: 0.5rem;
-    background-color: white;
-}
-
-#start-button {
-    padding: 0.5rem 1rem;
-}
