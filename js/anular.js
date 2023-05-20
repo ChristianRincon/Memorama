@@ -6,6 +6,4 @@ input.addEventListener( 'keydown', function(e){
     if(![38, 40, 9].includes(e.keyCode)){
         e.preventDefault();
     }
-}
-
-)
+});
