@@ -14,6 +14,8 @@ La dinámica consiste en lo siguiente:
 
 #
 
- # a) IMPORTANTE --> En BRANCH MAIN tengo el proyecto nativo (Contiene un valor estático de cartas y no posee el menú de elección, entre otras cosas).
+ # IMPORTANTE
+ 
+- En BRANCH MAIN tengo el proyecto nativo (Contiene un valor estático de cartas y no posee el menú de elección, entre otras cosas).
 
- # b) IMPORTANTE --> Si desea ver la versión dinámica junto al menú de elección y más, muevase y revise el código ubicado en BRANCH DEVELOP.
+- Si desea ver la versión dinámica junto al menú de elección y más, muevase y revise el código ubicado en BRANCH DEVELOP.
