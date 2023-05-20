@@ -10,8 +10,9 @@ La dinámica consiste en lo siguiente:
 - Si el usuario encuentra un PAR, dicho PAR no ocultará sus valores numéricos.
 
 - Esa lógica continuará hasta que el usuario encuentre todos los pares de la partida.
-- Si el usuario encuentra todos los pares, la aplicación esperará un tiempo (2 o 3 segundos) y automáticamente se reiniciará (volverá a aparecer el menú de elección de cantidad de cartas para volver a jugar con otras cantidades).
+- Si el usuario encuentra todos los pares, la aplicación esperará un tiempo (2 o 3 segundos) y automáticamente se reiniciará (volverá a aparecer el menú de elección de cantidad de cartas para volver a jugar con otras cantidades). 
 
+#
 
  # a) IMPORTANTE --> En BRANCH MAIN tengo el proyecto nativo (Contiene un valor estático de cartas y no posee el menú de elección, entre otras cosas).
 
