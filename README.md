@@ -2,7 +2,7 @@
 
 Creamos un memorama con HTML, CSS y JavaScript.
 
-La dinámica consiste en lo siguiente: 
+# Dinámica 
 
 - Se imprimen una cantidad de cartas elegidas por el usuario utilizando un menú de elección.
 - Una vez generadas, el usuario deberá hacer click sobre una de ellas para descubrir su valor numérico. Luego, el usuario deberá encontrar su PAR (una segunda carta que contenga el mismo valor numérico que la primera).
