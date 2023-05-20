@@ -13,6 +13,6 @@ La dinámica consiste en lo siguiente:
 - Si el usuario encuentra todos los pares, la aplicación esperará un tiempo (2 o 3 segundos) y automáticamente se reiniciará (volverá a aparecer el menú de elección de cantidad de cartas para volver a jugar con otras cantidades).
 
 
- # a) Actualización --> En BRANCH MAIN tengo el proyecto nativo (Contiene un valor estático de cartas y no posee el menú de elección, entre otras cosas).
+ # a) IMPORTANTE --> En BRANCH MAIN tengo el proyecto nativo (Contiene un valor estático de cartas y no posee el menú de elección, entre otras cosas).
 
- # b) Actualización --> Si desea ver la versión dinámica junto al menú de elección y más, muevase y revise el código ubicado en BRANCH DEVELOP.
+ # b) IMPORTANTE --> Si desea ver la versión dinámica junto al menú de elección y más, muevase y revise el código ubicado en BRANCH DEVELOP.
