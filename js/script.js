@@ -1,11 +1,12 @@
 // Actualizaciones:
-// Cambiamos el total de cartas estáticos por dinámicos (de 4 a 30 cartas a elección del usuario)
-// Reinicio de juego al encontrar todos los pares.
+// - Se cambio el modelo de cartas estáticas por cartas dinámicas (de 4 a 30 cartas a elección del usuario)
+// - Reinicio de juego al encontrar todos los pares.
 
+//Mecanismos del menú
 const input = document.getElementById('card-input');
 const btn = document.getElementById('start-button');
 
-
+//Ejecución de aplicación
 btn.addEventListener ( 'click', () => {
     const totalCards = input.value; // Valores dinámicos (4 a 30)
     let cards = [];
@@ -31,9 +32,9 @@ btn.addEventListener ( 'click', () => {
                         selectedCards = [];
                         currentMove = 0;
 
-                        if (pairsFound === totalCards / 2) { //Reinicio al encontrar todos los pares.
+                        if (pairsFound === totalCards / 2) { 
                             setTimeout( () => {
-                                window.location.reload();
+                                window.location.reload(); //Reinicio al encontrar todos los pares (en este caso se reinciará luego de 2000 milisegundos).
                             }, 2000);                   
                         }
 
@@ -77,7 +78,8 @@ btn.addEventListener ( 'click', () => {
         cards[i].querySelector('.face').innerHTML = values[i];
         cards[i].querySelector('.card').addEventListener('click', activate);
     }
-
+    
+    //Mecanismos del menú
     btn.remove();
     input.remove();
 });
