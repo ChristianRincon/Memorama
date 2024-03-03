@@ -91,7 +91,8 @@ btn.addEventListener ( 'click', () => {
         cards[i].querySelector('.face').innerHTML = values[i];
         cards[i].querySelector('.card').addEventListener('click', activate);
     }
-
+    
+    //Mecanismos del menú
     btn.remove();
     input.remove();
 });
