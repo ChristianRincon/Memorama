@@ -1,24 +1,34 @@
-// Actualizaciones:
-// Cambiamos el total de cartas estáticos por dinámicos (de 4 a 30 cartas a elección del usuario)
-// Reinicio de juego al encontrar todos los pares.
-
 const input = document.getElementById('card-input');
 const btn = document.getElementById('start-button');
+const cardsTitle = document.getElementById('cards-title');
 
+btn.addEventListener('mouseenter', function() {
+    this.innerHTML = '<i class="fa-solid fa-check"></i>';
+});
+
+btn.addEventListener('mouseleave', function() {
+    this.textContent = 'OK';
+});
 
 btn.addEventListener ( 'click', () => {
-    const totalCards = input.value; // Valores dinámicos (4 a 30)
+    cardsTitle.style.display = 'none';
+
+    const totalCards = input.value || 4;
     let cards = [];
     let selectedCards = [];
     let currentMove = 0;
     let pairsFound = 0;
 
-    let cardTemplate = '<div class="card"><div class="back"></div><div class="face"></div></div>';
+    let cardTemplate = `
+        <div class="card">
+            <div class="back"></div>
+            <div class="face"></div>
+        </div>`;
 
     function activate(e) {
         if (currentMove < 2 && !e.target.classList.contains('active')) {
             e.target.classList.add('active');
-
+        
             if (!selectedCards[0] || selectedCards[0] !== e.target) {
                 selectedCards.push(e.target);
 
@@ -32,9 +42,13 @@ btn.addEventListener ( 'click', () => {
                         currentMove = 0;
 
                         if (pairsFound === totalCards / 2) { //Reinicio al encontrar todos los pares.
+                            cards.forEach(card => {
+                                card.querySelector('.card .face').style.backgroundColor = 'green';
+                                card.querySelector('.card .face').style.transition = '3000ms';
+                            });
                             setTimeout( () => {
                                 window.location.reload();
-                            }, 2000);                   
+                            }, 2000);       
                         }
 
                     }else {

@@ -1,9 +1,17 @@
 body{
     margin: 0;
-    background: black;
-    /*overflow: hidden; Puedes habilitarlo, pero perderás el scroll al minimizar pantalla*/
+    background: rgba(0, 0, 0, 0.886);
 }
 
+.cards-title{
+    color: wheat;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
 #wrapper{
     height: 100vh;
     display: flex;
@@ -29,11 +37,13 @@ body{
     position: relative;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .card:hover{
     transform: scale(1.25);
 }
+
 .card.active {
     transform: rotateY(180deg);
 }
@@ -62,11 +72,12 @@ body{
     background-image: url(../img/back.jpg);
     background-size: cover;
     border: 3px solid rgba(0, 102, 128, 0.5);
+    box-shadow: 1px 1px 10px 6px  rgb(6, 136, 45);
 }
 
 #input-container {
     margin-top: 1rem;
-    display: flex;
+    display: block;
     align-items: center;
 }
 
@@ -78,17 +89,37 @@ body{
 }
 
 #start-button {
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 1px 1px 10px 6px  rgb(6, 136, 45);
+    margin-left: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 5%;
 }
 
-/* Estilos para las flechas de incremento y decremento */
+#start-button:hover {
+    background-color: rgb(43, 205, 31);
+    color: white;
+    box-shadow: 1px 1px 10px 6px  rgb(250, 251, 250);
+    margin-left: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 900ms;
+}
 
+/* Flechas de incremento y decremento */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button{
-    padding: 1.5em;
+    padding: 1.1em;
+    cursor: pointer;
 }
 
-input[type="number"]{
+.number{
     box-shadow: 1px 1px 10px 6px   rgb(6, 106, 136);
+    color: rgb(10, 65, 74);
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    width: 40%;
+    border-radius: 50%;
 }
